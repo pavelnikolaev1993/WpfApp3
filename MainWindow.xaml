@@ -28,16 +28,11 @@
         </DockPanel>
         <ToolBarTray Grid.Row="1" >
             <ToolBar Margin="5" Padding="5">
-                <ComboBox Margin="5" Padding="5" SelectedIndex="0" Width="100" SelectionChanged="ComboBox_SelectionChanged">
-                    <TextBlock Text="Arial"/>
-                    <TextBlock Text="Times new Roman"/>
-                    <TextBlock Text="Verdana"/>
-                </ComboBox>
-                <ComboBox Margin="5" Padding="5" SelectedIndex="0" Width="50" SelectionChanged="ComboBox_SelectionChanged_1">
-                    <TextBlock Text="12"/>
-                    <TextBlock Text="14"/>
-                    <TextBlock Text="16"/>
-                </ComboBox>
+                <ComboBox Margin="5" Padding="5" SelectedIndex="0" Width="100" 
+                          SelectionChanged="ComboBox_SelectionChanged" ItemsSource="{StaticResource fonts}"/>
+                <ComboBox Margin="5" Padding="5" SelectedIndex="0" Width="50" 
+                          SelectionChanged="ComboBox_SelectionChanged_1" ItemsSource="{StaticResource sizes}"/>
+
             </ToolBar>
             <ToolBar Margin="5" Padding="5">
                 <ToggleButton  Height="30" Width="30" Click="ToggleButton_Click_1" IsChecked="False">
