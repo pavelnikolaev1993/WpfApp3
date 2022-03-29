@@ -6,6 +6,11 @@
         xmlns:local="clr-namespace:WpfApp3"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="500">
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Open" Executed="MenuItem_Click"/>
+        <CommandBinding Command="ApplicationCommands.Save" Executed="MenuItem_Click_1"/>
+        <CommandBinding Command="ApplicationCommands.Close" Executed="MenuItem_Click_2"/>
+    </Window.CommandBindings>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -15,9 +20,9 @@
         <DockPanel>
          <Menu Margin=" 5" Padding="5">
             <MenuItem Header="Файл">
-                <MenuItem Header="Открыть" Click="MenuItem_Click"/>
-                <MenuItem Header="Сохранить" Click="MenuItem_Click_1"/>
-                <MenuItem Header="Закрыть" Click="MenuItem_Click_2"/>
+                <MenuItem Header="Открыть" Command="ApplicationCommands.Open"/>
+                    <MenuItem Header="Сохранить" Command="ApplicationCommands.Save"/>
+                    <MenuItem Header="Закрыть" Command="ApplicationCommands.Close"/>
             </MenuItem>
          </Menu>
         </DockPanel>
