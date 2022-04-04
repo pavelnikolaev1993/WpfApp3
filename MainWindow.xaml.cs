@@ -27,7 +27,7 @@ namespace WpfApp3
             InitializeComponent();
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        public void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string fontName = ((sender as ComboBox).SelectedItem as String);
             if (textBox != null)
